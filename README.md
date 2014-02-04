@@ -4,9 +4,6 @@
 ###Install
 ```sh
 $ npm install -g linguist
-$ translate --from en --to it "hello, how are you" "this is a nice cat"
-ciao, come stai
-questo è un bel gatto
 ```
 
 ###Usage
@@ -54,10 +51,12 @@ will produce this output file:
 ```
 
 ##Library
+###Install
 ```sh
 $ npm install linguist --save
 ```
 
+###Usage
 ```js
 var linguist = require("linguist");
 
