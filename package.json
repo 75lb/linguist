@@ -1,12 +1,16 @@
 {
   "name": "linguist",
   "version": "0.0.0",
-  "description": "a translation service for Node and the command line",
+  "description": "a translation service for Node and command line",
   "repository": "https://github.com/75lb/linguist",
-  "bin": "linguist.js",
+  "main": "lib/yandex.js",
+  "bin": {
+    "translate": "linguist.js"
+  },
   "author": "Lloyd Brookes",
   "license": "MIT",
   "dependencies": {
-    "nature": "~0.3.1"
+    "nature": "~0.3.1",
+    "wodge": "~0.1.3"
   }
 }
