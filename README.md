@@ -1,1 +1,1 @@
-#translate-json
+#linguist
