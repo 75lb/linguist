@@ -1,7 +1,8 @@
 {
   "name": "translate",
   "version": "0.0.0",
-  "description": "",
+  "description": "a translation service for Node and the command line",
+  "repository": "https://github.com/75lb/linguist",
   "bin": "translate.js",
   "author": "Lloyd Brookes",
   "license": "MIT",
