@@ -4,5 +4,8 @@
   "description": "",
   "bin": "translate.js",
   "author": "Lloyd Brookes",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nature": "~0.3.1"
+  }
 }
