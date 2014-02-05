@@ -16,8 +16,8 @@ $ npm install -g linguist
 $ translate [--from <string>] [--to <string>] <text> <text> ...
 $ translate [--from <string>] [--to <string>] --input <filename> --output <filename>
 
--f, --from        The language to translate from
--t, --to          The language to translate to
+-f, --from        The language to translate from (default: 'en')
+-t, --to          The language to translate to (default: 'en')
 -i, --input       A valid JSON file to translate
 -o, --output      The output JSON file with input JSON values (but not keys) translated
 -h, --help        Print usage instructions
@@ -28,6 +28,11 @@ $ translate [--from <string>] [--to <string>] --input <filename> --output <filen
 $ translate --from en --to it "hello, how are you" "this is a nice cat"
 ciao, come stai
 questo è un bel gatto
+```
+
+```sh
+$ translate "I would like the rabbit please" -t cs
+Já bych králíka prosím
 ```
 
 ####translate the values in a json file

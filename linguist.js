@@ -29,8 +29,8 @@ var usage = "Usage: \n\
 $ translate [--from <string>] [--to <string>] <text> <text> ...\n\
 $ translate [--from <string>] [--to <string>] --input <filename> --output <filename>\n\
 \n\
--f, --from        The language to translate from\n\
--t, --to          The language to translate to\n\
+-f, --from        The language to translate from (default: 'en')\n\
+-t, --to          The language to translate to (default: 'en')\n\
 -i, --input       A valid JSON file to translate\n\
 -o, --output      The output JSON file with input JSON values (but not keys) translated\n\
 -h, --help        Print usage instructions\n\
