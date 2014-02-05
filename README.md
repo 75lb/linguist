@@ -13,14 +13,14 @@ $ npm install -g linguist
 
 ###Usage
 ```
-$ translate [--from <string>] [--to <string>] <text> <text> ...\n\
-$ translate [--from <string>] [--to <string>] --input <filename> --output <filename>\n\
-\n\
--f, --from        The language to translate from\n\
--t, --to          The language to translate to\n\
--i, --input       A valid JSON file to translate\n\
--o, --output      The output JSON file with input JSON values (but not keys) translated\n\
--h, --help        Print usage instructions\n\
+$ translate [--from <string>] [--to <string>] <text> <text> ...
+$ translate [--from <string>] [--to <string>] --input <filename> --output <filename>
+
+-f, --from        The language to translate from
+-t, --to          The language to translate to
+-i, --input       A valid JSON file to translate
+-o, --output      The output JSON file with input JSON values (but not keys) translated
+-h, --help        Print usage instructions
 ```
 
 ####translate text at the command line
