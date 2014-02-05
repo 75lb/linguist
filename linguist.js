@@ -67,7 +67,11 @@ if (options.valid){
         translateObject(input);
     } else if (options.from && options.to && options.text){
         yandex.translate(options.text, options.from, options.to, function(translation){
-            console.log(translation.text.join("\n"));
+            if  (translation.code === 200){
+                console.log(translation.text.join("\n"));
+            } else {
+                logError(translation.message);
+            }
         });
     } else {
         logError("Invalid usage.. ");
