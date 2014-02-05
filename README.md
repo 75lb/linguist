@@ -31,7 +31,7 @@ questo è un bel gatto
 ```
 
 ####translate the values in a json file
-with an input file like this:
+An input file like this:
 ```json
 {
     "content": {
@@ -46,12 +46,12 @@ with an input file like this:
 }
 ```
 
-this command 
+...and this command:
 ```sh
 $ translate --input input.json --output output.json --from en --to it
 ```
 
-will produce this output file: 
+...would produce this output file: 
 ```json
 {
     "content": {
@@ -84,7 +84,7 @@ linguist.translate("hello, how are you", "en", "it", function(translation){
 ##Supported Languages
 <table>
     <tr>
-        <th>Language</th><th>Directions</th>
+        <th>Language</th><th>Directions</th><th></th><th></th><th></th>
     </tr>
     <tr>
         <td>
@@ -167,6 +167,8 @@ linguist.translate("hello, how are you", "en", "it", function(translation){
             en-de<br>
             en-el<br>
             en-es<br>
+        </td>
+        <td>
             en-et<br>
             en-fi<br>
             en-fr<br>
@@ -208,6 +210,8 @@ linguist.translate("hello, how are you", "en", "it", function(translation){
             it-en<br>
             it-ru<br>
             it-uk<br>
+        </td>
+        <td>
             lt-en<br>
             lt-ru<br>
             lv-en<br>
@@ -249,6 +253,8 @@ linguist.translate("hello, how are you", "en", "it", function(translation){
             ru-nl<br>
             ru-no<br>
             ru-pl<br>
+        </td>
+        <td>
             ru-pt<br>
             ru-ro<br>
             ru-sk<br>
