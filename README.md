@@ -84,7 +84,7 @@ linguist.translate("hello, how are you", "en", "it", function(translation){
 ##Supported Languages
 <table>
     <tr>
-        <th>Language</th><th>Directions</th><th></th><th></th><th></th>
+        <th>Language</th><th colspan=4>Directions</th>
     </tr>
     <tr>
         <td>
