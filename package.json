@@ -1,7 +1,7 @@
 {
   "name": "linguist",
   "version": "0.0.1",
-  "description": "a translation service for Node and command line",
+  "description": "Translate strings or JSON from Node.js or the command line",
   "repository": "https://github.com/75lb/linguist",
   "main": "lib/yandex.js",
   "bin": {
