@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 "use strict";
 
-var yandex = require("./lib/yandex"),
+var yandex = require("../lib/linguist"),
     Model = require("nature").Model,
-    w = require("wodge"),
+    dope = require("console-dope"),
     path = require("path"),
     fs = require("fs"),
     l = console.log;
 
 function logError(msg){
-    l(w.red(msg));
+    dope.red.log(msg);
 }
 
 var options = new Model()

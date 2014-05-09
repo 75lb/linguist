@@ -1,8 +1,11 @@
 {
   "name": "linguist",
   "version": "0.1.3",
-  "description": "Translate strings or JSON from Node.js or the command line",
-  "keywords": ["language", "translation"],
+  "description": "Translate strings or whole JSON files",
+  "keywords": [
+    "language",
+    "translation"
+  ],
   "repository": "https://github.com/75lb/linguist",
   "main": "lib/linguist.js",
   "bin": {
@@ -11,6 +14,7 @@
   "author": "Lloyd Brookes",
   "license": "MIT",
   "dependencies": {
+    "console-dope": "~0.3.3",
     "nature": "~0.4",
     "wodge": "~0.6"
   }
