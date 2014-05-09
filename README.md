@@ -1,5 +1,6 @@
-[![NPM version](https://badge.fury.io/js/linguist.png)](http://badge.fury.io/js/linguist)
-[![Dependency Status](https://david-dm.org/75lb/linguist.png)](https://david-dm.org/75lb/linguist)
+[![view on npm](http://img.shields.io/npm/v/linguist.svg)](https://www.npmjs.org/package/linguist)
+![npm module downloads per month](http://img.shields.io/npm/dm/linguist.svg)
+[![Dependency Status](https://david-dm.org/75lb/linguist.svg)](https://david-dm.org/75lb/linguist)
 ![Analytics](https://ga-beacon.appspot.com/UA-27725889-26/linguist/README.md?pixel)
 
 #linguist
@@ -302,5 +303,3 @@ linguist.translate("hello, how are you", "en", "it", function(translation){
 </table>
 
 [Yandex terms of use](http://legal.yandex.com/translate_api/)
-
-![NPM](https://nodei.co/npm-dl/linguist.png?months=3)

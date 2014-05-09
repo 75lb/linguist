@@ -2,17 +2,17 @@
 "use strict";
 
 var yandex = require("./lib/yandex"),
-    Thing = require("nature").Thing,
-    wodge = require("wodge"),
+    Model = require("nature").Model,
+    w = require("wodge"),
     path = require("path"),
     fs = require("fs"),
     l = console.log;
 
 function logError(msg){
-    l(wodge.red(msg));
+    l(w.red(msg));
 }
 
-var options = new Thing()
+var options = new Model()
     .on("error", function(err){
         logError("Error: " + err.message);
         process.exit(1);
@@ -36,7 +36,7 @@ $ translate [--from <string>] [--to <string>] --input <filename> --output <filen
 -h, --help        Print usage instructions\n\
 \n\
 for more information, visit https://github.com/75lb/linguist\n";
-    
+
 function translateObject(obj){
     Object.keys(obj).forEach(function(word){
         var text = obj[word];
@@ -63,7 +63,7 @@ if (options.valid){
     } else if (options.input && options.output && options.from && options.to){
         var input = require(path.join(process.cwd(), options.input)),
             output = path.join(process.cwd(), options.output);
-        
+
         translateObject(input);
     } else if (options.from && options.to && options.text){
         yandex.translate(options.text, options.from, options.to, function(translation){
