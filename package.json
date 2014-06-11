@@ -14,8 +14,8 @@
   "author": "Lloyd Brookes",
   "license": "MIT",
   "dependencies": {
-    "console-dope": "~0.3.3",
-    "nature": "~0.4",
-    "wodge": "~0.6"
+    "array-ting": "^1.0.4",
+    "command-line-args": "^0.2.3",
+    "console-dope": "~0.3.3"
   }
 }

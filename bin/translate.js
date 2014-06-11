@@ -2,28 +2,28 @@
 "use strict";
 
 var yandex = require("../lib/linguist"),
-    Model = require("nature").Model,
+    cliArgs = require("command-line-args"),
     dope = require("console-dope"),
     path = require("path"),
-    fs = require("fs"),
-    l = console.log;
+    fs = require("fs");
 
 function logError(msg){
     dope.red.log(msg);
 }
 
-var options = new Model()
-    .on("error", function(err){
-        logError("Error: " + err.message);
-        process.exit(1);
-    })
-    .define({ name: "from", type: "string", alias: "f", value: "en" })
-    .define({ name: "to", type: "string", alias: "t", value: "en" })
-    .define({ name: "text", type: Array, defaultOption: true })
-    .define({ name: "input", type: "string", alias: "i" })
-    .define({ name: "output", type: "string", alias: "o" })
-    .define({ name: "help", type: "boolean", alias: "h" })
-    .set(process.argv);
+try {
+    var options = cliArgs([
+        { name: "from", alias: "f", value: "en" },
+        { name: "to", alias: "t", value: "en" },
+        { name: "text", type: Array, defaultOption: true },
+        { name: "input", alias: "i" },
+        { name: "output", alias: "o" },
+        { name: "help", type: Boolean, alias: "h" }
+    ]).parse();
+} catch(err){
+    logError("Error: " + err.message);
+    process.exit(1);
+}
 
 var usage = "Usage: \n\
 $ translate [--from <string>] [--to <string>] <text> <text> ...\n\
@@ -41,7 +41,7 @@ function translateObject(obj){
     Object.keys(obj).forEach(function(word){
         var text = obj[word];
         if(typeof text === "string"){
-            l("translating: " + text);
+            dope.log("translating: " + text);
             yandex.translate(text, options.from, options.to, function(translation){
                 if  (translation.code === 200){
                     obj[word] = translation.text[0];
@@ -57,28 +57,22 @@ function translateObject(obj){
     });
 }
 
-if (options.valid){
-    if (options.help){
-        l(usage);
-    } else if (options.input && options.output && options.from && options.to){
-        var input = require(path.join(process.cwd(), options.input)),
-            output = path.join(process.cwd(), options.output);
+if (options.help){
+    dope.log(usage);
+} else if (options.input && options.output && options.from && options.to){
+    var input = require(path.join(process.cwd(), options.input)),
+        output = path.join(process.cwd(), options.output);
 
-        translateObject(input);
-    } else if (options.from && options.to && options.text){
-        yandex.translate(options.text, options.from, options.to, function(translation){
-            if  (translation.code === 200){
-                console.log(translation.text.join("\n"));
-            } else {
-                logError(translation.message);
-            }
-        });
-    } else {
-        logError("Invalid usage.. ");
-        l(usage);
-    }
+    translateObject(input);
+} else if (options.from && options.to && options.text){
+    yandex.translate(options.text, options.from, options.to, function(translation){
+        if  (translation.code === 200){
+            console.log(translation.text.join("\n"));
+        } else {
+            logError(translation.message);
+        }
+    });
 } else {
-    logError("Some values were invalid");
-    logError(optionSet.validationMessages.toString());
-    l(usage);
+    logError("Invalid usage.. ");
+    dope.log(usage);
 }
