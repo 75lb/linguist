@@ -1,9 +1,5 @@
 [![view on npm](https://badgen.net/npm/v/linguist)](https://www.npmjs.org/package/linguist)
 [![npm module downloads](https://badgen.net/npm/dt/linguist)](https://www.npmjs.org/package/linguist)
-[![Gihub repo dependents](https://badgen.net/github/dependents-repo/75lb/linguist)](https://github.com/75lb/linguist/network/dependents?dependent_type=REPOSITORY)
-[![Gihub package dependents](https://badgen.net/github/dependents-pkg/75lb/linguist)](https://github.com/75lb/linguist/network/dependents?dependent_type=PACKAGE)
-[![Build Status](https://travis-ci.org/75lb/linguist.svg?branch=master)](https://travis-ci.org/75lb/linguist)
-[![Coverage Status](https://coveralls.io/repos/github/75lb/linguist/badge.svg)](https://coveralls.io/github/75lb/linguist)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # linguist
