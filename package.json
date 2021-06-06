@@ -1,21 +1,27 @@
 {
   "name": "linguist",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.1.7",
   "description": "Translate strings or whole JSON files",
+  "repository": "https://github.com/75lb/linguist",
+  "main": "./index.mjs",
+  "exports": "./index.mjs",
   "keywords": [
     "language",
     "translation"
   ],
-  "repository": "https://github.com/75lb/linguist",
-  "main": "lib/linguist.js",
-  "bin": {
-    "translate": "bin/translate.js"
-  },
-  "author": "Lloyd Brookes",
   "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "test": "test-runner test.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "bin"
+  ],
   "dependencies": {
-    "array-tools": "^1.0.6",
-    "command-line-args": "^0.2.3",
-    "console-dope": "~0.3.3"
+    "command-line-args": "^5.1.1"
   }
 }

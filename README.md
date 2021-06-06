@@ -1,18 +1,24 @@
-[![view on npm](http://img.shields.io/npm/v/linguist.svg)](https://www.npmjs.org/package/linguist)
-![npm module downloads per month](http://img.shields.io/npm/dm/linguist.svg)
-[![Dependency Status](https://david-dm.org/75lb/linguist.svg)](https://david-dm.org/75lb/linguist)
-![Analytics](https://ga-beacon.appspot.com/UA-27725889-26/linguist/README.md?pixel)
+[![view on npm](https://badgen.net/npm/v/linguist)](https://www.npmjs.org/package/linguist)
+[![npm module downloads](https://badgen.net/npm/dt/linguist)](https://www.npmjs.org/package/linguist)
+[![Gihub repo dependents](https://badgen.net/github/dependents-repo/75lb/linguist)](https://github.com/75lb/linguist/network/dependents?dependent_type=REPOSITORY)
+[![Gihub package dependents](https://badgen.net/github/dependents-pkg/75lb/linguist)](https://github.com/75lb/linguist/network/dependents?dependent_type=PACKAGE)
+[![Build Status](https://travis-ci.org/75lb/linguist.svg?branch=master)](https://travis-ci.org/75lb/linguist)
+[![Coverage Status](https://coveralls.io/repos/github/75lb/linguist/badge.svg)](https://coveralls.io/github/75lb/linguist)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
-#linguist
+# linguist
+
 Translate strings or JSON (e.g. internationalisation resource files) from Node.js or the command line. 
 
-##Command line
-###Install
+## Command line
+### Install
+
 ```sh
 $ npm install -g linguist
 ```
 
-###Usage
+### Usage
+
 ```
 $ translate [--from <string>] [--to <string>] <text> <text> ...
 $ translate [--from <string>] [--to <string>] --input <filename> --output <filename>
@@ -24,7 +30,8 @@ $ translate [--from <string>] [--to <string>] --input <filename> --output <filen
 -h, --help        Print usage instructions
 ```
 
-####translate text at the command line
+#### translate text at the command line
+
 ```sh
 $ translate --from en --to it "hello, how are you" "this is a nice cat"
 ciao, come stai
@@ -36,8 +43,10 @@ $ translate "I would like the rabbit please" -t cs
 Já bych králíka prosím
 ```
 
-####translate the values in a json file
+#### translate the values in a json file
+
 An input file like this:
+
 ```json
 {
     "content": {
@@ -53,11 +62,13 @@ An input file like this:
 ```
 
 ...and this command:
+
 ```sh
 $ translate --input input.json --output output.json --from en --to it
 ```
 
 ...would produce this output file: 
+
 ```json
 {
     "content": {
@@ -72,13 +83,15 @@ $ translate --input input.json --output output.json --from en --to it
 }
 ```
 
-##Library
-###Install
+## Library
+### Install
+
 ```sh
 $ npm install linguist --save
 ```
 
-###Usage
+### Usage
+
 ```js
 var linguist = require("linguist");
 
@@ -87,7 +100,8 @@ linguist.translate("hello, how are you", "en", "it", function(translation){
 });
 ```
 
-##Supported Languages
+## Supported Languages
+
 <table>
     <tr>
         <th>Language</th><th colspan=4>Directions</th>
@@ -303,3 +317,9 @@ linguist.translate("hello, how are you", "en", "it", function(translation){
 </table>
 
 [Yandex terms of use](http://legal.yandex.com/translate_api/)
+
+* * *
+
+&copy; 2014-21 Lloyd Brookes \<75pound@gmail.com\>.
+
+Tested by [test-runner](https://github.com/test-runner-js/test-runner).
