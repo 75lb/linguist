@@ -2,14 +2,13 @@ import util from 'util'
 import https from 'https'
 import arrayify from 'array-back'
 
-const apiKey = 'trnsl.1.1.20140204T101704Z.39bc6456ed6dc4d1.d62d26300c4ce6052906183c5e8b47de9a04b47f'
-
 const yandex = {
   host: 'translate.yandex.net',
   path: '/api/v1.5/tr.json/translate?key=%s&lang=%s-%s&%s'
 }
 
-export function translate (text, from, to, done) {
+async function translate (text, from, to, done, apiKey) {
+  apiKey = apiKey || 'trnsl.1.1.20140204T101704Z.39bc6456ed6dc4d1.d62d26300c4ce6052906183c5e8b47de9a04b47f'
   text = arrayify(text)
   const url = util.format(
     'https://%s%s',
@@ -32,3 +31,5 @@ export function translate (text, from, to, done) {
     console.log('Request error: ' + err.message)
   })
 }
+
+export default translate

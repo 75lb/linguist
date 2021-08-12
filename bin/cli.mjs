@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { translate } from '../index.mjs'
+import translate from 'linguist'
 import commandLineArgs from 'command-line-args'
 import path from 'path'
 import * as fs from 'fs'
@@ -16,6 +16,7 @@ try {
     { name: 'text', type: Array, defaultOption: true },
     { name: 'input', alias: 'i' },
     { name: 'output', alias: 'o' },
+    { name: 'api-key', alias: 'k' },
     { name: 'help', type: Boolean, alias: 'h' }
   ])
 } catch (err) {
@@ -31,6 +32,7 @@ $ translate [--from <string>] [--to <string>] --input <filename> --output <filen
 -t, --to          The language to translate to (default: 'en')\n\
 -i, --input       A valid JSON file to translate\n\
 -o, --output      The output JSON file with input JSON values (but not keys) translated\n\
+-k, --api-key     The Yandex API key to use, else use the built-in default.\n\
 -h, --help        Print usage instructions\n\
 \n\
 for more information, visit https://github.com/75lb/linguist\n"
@@ -48,7 +50,7 @@ function translateObject (obj) {
           logError(translation.message)
           process.exit(1)
         }
-      })
+      }, options['api-key'])
     } else {
       translateObject(obj[word])
     }
@@ -69,7 +71,7 @@ if (options.help) {
     } else {
       logError(translation.message)
     }
-  })
+  }, options['api-key'])
 } else {
   logError('Invalid usage.. ')
   console.log(usage)
