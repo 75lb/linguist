@@ -6,6 +6,9 @@
   "repository": "https://github.com/75lb/linguist",
   "main": "./index.mjs",
   "exports": "./index.mjs",
+  "bin": {
+    "translate": "bin/cli.mjs"
+  },
   "keywords": [
     "language",
     "translation"
