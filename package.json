@@ -1,7 +1,7 @@
 {
   "name": "linguist",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Translate strings or whole JSON files",
   "repository": "https://github.com/75lb/linguist",
   "exports": "./index.mjs",
